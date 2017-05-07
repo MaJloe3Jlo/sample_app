@@ -148,6 +148,7 @@ DEPENDENCIES
   coffee-rails (= 4.0.1)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  minitest
   pg (= 0.15.1)
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)
@@ -158,6 +159,9 @@ DEPENDENCIES
   sqlite3
   turbolinks (= 1.1.1)
   uglifier (= 2.1.1)
+
+RUBY VERSION
+   ruby 2.1.0p0
 
 BUNDLED WITH
    1.14.6
