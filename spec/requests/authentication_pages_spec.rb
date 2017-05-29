@@ -4,9 +4,9 @@ describe "Authentication" do
   
   subject { page }
 
-  describe "singin page" do
+  describe "signin page" do
   	
-  	before { visit singin_path }
+  	before { visit signin_path }
 
   	it { should have_content('Sign in')}
   	it { should have_title('Sign in')}
@@ -14,7 +14,7 @@ describe "Authentication" do
 
   describe "signin" do
     
-    before { visit singin_path }
+    before { visit signin_path }
 
     describe "with invalid information" do
       
@@ -41,7 +41,12 @@ describe "Authentication" do
       it { should have_title(user.name) }
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
-      it { should_not have_link('Sign in', href: singin_path) }	
-    end	
+      it { should_not have_link('Sign in', href: signin_path) }	
+    end
+
+    describe "followed by signout" do
+        before { click_link "Sign out" }
+        it { should have_link('Sign in') }
+    end
   end
 end
