@@ -8,6 +8,8 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'rake', '< 11.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'json', '< 1.8.6'
+gem 'faker', '1.1.2'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
   gem 'sqlite3'
